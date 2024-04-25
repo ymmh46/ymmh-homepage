@@ -67,6 +67,11 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    fontFamily: {
+      sans: ["'IBM Plex Sans', 'Noto Sans TC'", "sans-serif"],
+      serif: ["'IBM Plex Serif', 'Noto Serif TC'", "serif"],
+      hand: ["Caveat", "cursive"],
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };
