@@ -1,5 +1,5 @@
 ---
-import { Waves } from "lucide-react";
+import { Waves, Sun, Moon, Menu } from "lucide-react";
 ---
 
 <nav
@@ -14,12 +14,30 @@ import { Waves } from "lucide-react";
       </h1>
     </a>
     <div class="hidden md:flex text-md font-light ml-8 gap-4">
-      <a href="#about">About</a>
-      <a href="#bio">Bio</a>
-      <a href="#skills">Skills</a>
-      <a href="#playlist">Playlist</a>
-      <a href="#life">Life</a>
+      <a
+        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        href="#about">About</a
+      >
+      <a
+        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        href="#bio">Bio</a
+      >
+      <a
+        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        href="#skills">Skills</a
+      >
+      <a
+        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        href="#playlist">Playlist</a
+      >
+      <a
+        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        href="#life">Life</a
+      >
     </div>
   </div>
-  <!-- <ModeToggle client:load /> -->
+  <div class="flex gap-6">
+    <div class="cursor-pointer"><Sun /></div>
+    <div class="md:hidden cursor-pointer"><Menu /></div>
+  </div>
 </nav>
