@@ -1,43 +1,46 @@
 ---
-import { Waves, Sun, Moon, Menu } from "lucide-react";
+import { Waves, Menu } from "lucide-react";
+import ThemeToggle from "./ToggleThemeButton";
 ---
 
 <nav
-  class="fixed top-0 left-0 w-full flex py-4 px-6 z-50 justify-between content-center backdrop-blur-md bg-orange-50/50"
+  class="fixed top-0 left-0 w-full flex py-4 px-6 z-50 justify-between content-center backdrop-blur-md bg-orange-50/50 dark:bg-zinc-900/50 transition-colors duration-500"
 >
   <div class="flex items-center">
-    <a href="/" class="flex gap-2 items-center">
+    <a href="/" class="flex gap-2 dark:text-white items-center">
       <Waves size={18} strokeWidth={3} /><h1
         class="text-2xl font-hand font-bold"
       >
         ymmh
       </h1>
     </a>
-    <div class="hidden md:flex text-md font-light ml-8 gap-4">
+    <div
+      class="hidden md:flex text-md font-light ml-8 gap-4 dark:text-zinc-300"
+    >
       <a
-        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        class="cursor-pointer hover:decoration-black dark:hover:decoration-zinc-300 hover:underline hover:underline-offset-2 hover:decoration-1"
         href="#about">About</a
       >
       <a
-        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        class="cursor-pointer hover:decoration-black dark:hover:decoration-zinc-300 hover:underline hover:underline-offset-2 hover:decoration-1"
         href="#bio">Bio</a
       >
       <a
-        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        class="cursor-pointer hover:decoration-black dark:hover:decoration-zinc-300 hover:underline hover:underline-offset-2 hover:decoration-1"
         href="#skills">Skills</a
       >
       <a
-        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        class="cursor-pointer hover:decoration-black dark:hover:decoration-zinc-300 hover:underline hover:underline-offset-2 hover:decoration-1"
         href="#playlist">Playlist</a
       >
       <a
-        class="cursor-pointer hover:decoration-black hover:underline hover:underline-offset-2 hover:decoration-1"
+        class="cursor-pointer hover:decoration-black dark:hover:decoration-zinc-300 hover:underline hover:underline-offset-2 hover:decoration-1"
         href="#life">Life</a
       >
     </div>
   </div>
-  <div class="flex gap-6">
-    <div class="cursor-pointer"><Sun /></div>
+  <div class="flex gap-6 dark:text-white">
+    <ThemeToggle client:load />
     <div class="md:hidden cursor-pointer"><Menu /></div>
   </div>
 </nav>
